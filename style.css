@@ -1,0 +1,300 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Baskerville", "Times New Roman", serif;
+    background-color: #f9f4e6; /* Lighter cream background to match image */
+    color: #5c4738;
+    line-height: 1.6;
+    padding: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 500px;
+    margin: 30px 0 40px 50px;
+    text-align: left;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 18px;
+    font-weight: normal;
+    color: #8c1a1a;
+    letter-spacing: 0.5px;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin: 0 0 12px;
+    line-height: 1.4;
+    color: #5c4738;
+    max-width: 450px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name-lists {
+    width: 200px;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.name-list-section {
+    margin-bottom: 20px;
+}
+
+.name-list-section h3 {
+    font-size: 12px;
+    font-style: italic;
+    color: #8c1a1a;
+    margin-bottom: 8px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+    opacity: 0.9;
+}
+
+.names-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-item {
+    font-size: 8.5px;
+    margin-bottom: 4px;
+    color: #5c4738;
+    letter-spacing: 0.1px;
+    line-height: 1.2;
+}
+
+/* Legend styles */
+.legend {
+    width: 180px;
+    padding: 20px 20px 20px 40px;
+    float: left;
+}
+
+.legend h2 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: normal;
+    color: #8c1a1a;
+    letter-spacing: 0.3px;
+    opacity: 0.9;
+}
+
+.legend-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.legend-section {
+    margin-bottom: 24px;
+}
+
+.legend-section h3 {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    font-weight: normal;
+    color: #5c4738;
+    letter-spacing: 0.2px;
+    opacity: 0.9;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.legend-color {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: none;
+}
+
+.legend-label {
+    font-size: 0.85rem;
+    color: #5c4738;
+}
+
+.lustre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lustre-item {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.lustre-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b5dbb9; /* Soft mint green to match nodes */
+    opacity: 0.8;
+}
+
+.lustre-number {
+    font-size: 7px;
+    color: #5c4738;
+    font-weight: bold;
+}
+
+/* Visualization styles */
+#visualization {
+    width: calc(100% - 300px);
+    min-height: 800px;
+    overflow: visible;
+    margin-left: auto;
+    margin-top: 0px;
+}
+
+/* Sephirot styles */
+.sephirot {
+    fill: none;
+    stroke: #d4c48f;
+    stroke-width: 0.4;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 1.2, 1.2;
+}
+
+.genius-node {
+    cursor: pointer;
+}
+
+.genius-node-circle {
+    stroke: none;
+}
+
+.genius-node-text {
+    font-size: 14px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+    fill: #5c4738;
+    font-weight: bold;
+}
+
+.genius-label {
+    font-size: 11px;
+    fill: #5c4738;
+    text-anchor: start;
+    letter-spacing: 0.1px;
+}
+
+.path-line {
+    stroke-width: 0.35;
+    stroke: #d4c48f;
+    stroke-dasharray: 1.2, 1.2;
+    fill: none;
+    opacity: 0.7;
+}
+
+.sephirot-label {
+    font-size: 13px;
+    font-style: italic;
+    fill: #8c1a1a;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    letter-spacing: 0.3px;
+    opacity: 0.9;
+}
+
+.sephirot-node {
+    fill: #f9f4e6;
+    stroke: #d4c48f;
+    stroke-width: 0.35;
+    opacity: 0.7;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    padding: 7px 8px;
+    background: rgba(249, 244, 233, 0.98);
+    border: none;
+    pointer-events: none;
+    font-size: 0.65rem;
+    max-width: 180px;
+    box-shadow: 0 0 2px rgba(92, 63, 44, 0.1);
+    z-index: 100;
+    display: none;
+}
+
+.tooltip h3 {
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: #8c1a1a;
+    letter-spacing: 0.2px;
+    padding-bottom: 3px;
+    border-bottom: 0.5px dotted #d4c48f;
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 0.65rem;
+    color: #8c7b6c;
+    padding: 20px 0;
+    width: 280px;
+    margin-left: 40px;
+}
+
+.signature {
+    font-size: 0.6rem;
+    color: #8c7b6c;
+    font-style: italic;
+    margin-top: 50px;
+    letter-spacing: 0.2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .description {
+        font-size: 0.8rem;
+    }
+    
+    #visualization {
+        min-height: 500px;
+    }
+}
