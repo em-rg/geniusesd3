@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geniuses, Visualized - Inspired by Giorgia Lupi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Geniuses, visualized</h1>
+        <p class="description">
+            This visualization explores the one hundred geniuses of language identified in the book "Geniuses" by Harold Bloom.
+        </p>
+        <p class="description">
+            The representation is based on the Kabbalistic Sephirot structure of the diagram in the book, using the 
+            paths from the Kabbalistic tradition, 
+            historical period of creation, main profession, 
+            countries of origin, number of pages dedicated 
+            to them in the book, wikipedia.org and relationship with other 
+            historical figures.
+        </p>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="legend">
+                <h2>How to read it?</h2>
+                <div class="legend-content">
+                    <!-- Legend content will be filled with JavaScript -->
+                </div>
+            </div>
+
+            <div id="visualization">
+                <!-- Visualization will be created with D3.js -->
+            </div>
+            
+            <div class="name-lists">
+                <!-- Name lists for each Sephirot will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Harold Bloom, "Genius" Italian edition Rizzoli, 2002. Source: wikipedia.com</p>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
